@@ -41,7 +41,7 @@ wendy.first = function(ironYard, n) {
 
     console.log(wendy.first(ironYard, n));
 
-    // OR
+    // _.size
 
 var chase = {}
 
@@ -52,3 +52,32 @@ chase.size = function (list) {
 };
 
 chase.size(myArray)
+  var w = chase.size(myArray)
+  console.log(w);
+
+
+      // _.range
+
+var start=0;
+var stop=20;
+var step=5;
+var andrew={};
+
+andrew.range = function(start, stop, step) {
+    if (arguments.length <= 1) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = step || 1;
+
+    var length = Math.max(Math.ceil((stop - start) / step), 0);
+    var range = Array(length);
+
+    for (var idx = 0; idx < length; idx++, start += step) {
+      range[idx] = start;
+    }
+
+    return range;
+  };
+
+console.log(andrew.range(start,stop, step));

@@ -81,3 +81,27 @@ andrew.range = function(start, stop, step) {
   };
 
 console.log(andrew.range(start,stop, step));
+
+
+
+
+      // CLASS REVIEW
+
+
+  // setup my main function
+  var tim= {};
+
+  var arr = ['Tim', 'Phil', 'Bill'];
+
+    // Function will return a new array
+    // Take two parameters
+    // 1. an array
+    // 2. a callback, function
+  tim.map = function (arr, funct) {
+    var res = [], i;
+    for (i = 0; i < arr.length; i++){
+      res[i] = funct(arr[i]);
+    }
+
+    return res;
+  };

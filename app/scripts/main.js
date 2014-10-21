@@ -1,26 +1,62 @@
+var array = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
+var wendy = {};
+
+
+wendy.size = function(thing) {
+  console.log(thing.length);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // _.object
 
 var ironYard = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
 var age = ["30yrs", "25yrs", "24yrs", "23yrs", "22yrs", "31yrs", "29yrs", "35yrs", "27yrs"];
+
+var root=this;
 var wendy=[];
 
-wendy.object = function( ironYard, age) {
-    if (ironYard == null) return {};
+root.wendy = wendy;
+
+wendy.object = function( arr, function) {
+    if (arr == null) return {};
     var result = {};
-    for (var i = 0, length = ironYard.length; i < length; i++) {
-      if (age) {
-        result[ironYard[i]] = age[i];
+    for (var i = 0, length = arr.length; i < length; i++) {
+      if (funct) {
+        result[arr[i]] = function[i];
       }
 
       else {
-        result[ironYard[i][0]] = ironYard[i][1];
+        result[arr[i][0]] = arr[i][1];
       }
     }
     return result;
   };
 
-  var w= wendy.object(ironYard,age);
+  var w= wendy.object(arr,age);
 
   console.log(w);
 
@@ -104,4 +140,21 @@ console.log(andrew.range(start,stop, step));
     }
 
     return res;
+  };
+
+
+
+
+  tim.map = function (arr, funct) {
+    if ( Array.isArray(arr) ) {
+        if (arr.length > 0) {
+          var res = [], i;
+          for (i = 0; i < arr.length; i++){
+          res[i] = funct(arr[i]);
+        }
+        return res;
+      }
+      return [];
+    } else {
+    return console.log('This is not an array')
   };

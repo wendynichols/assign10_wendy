@@ -1,6 +1,11 @@
-Use the following 4 methods
-.map()
-.reduce()
-.filter()
-One more of your choosing
-Recreate the functionality without using jQuery or Underscore
+he Iron Yard Atlanta
+Fall 2014 Front End Class
+
+Assignment 10: Pick four underscore methods and recreate the functionality without using jQuery or Underscore
+
+Underscore methods recreated:
+first
+size
+random
+equal
+map

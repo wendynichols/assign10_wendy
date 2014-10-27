@@ -1,45 +1,38 @@
-var array = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
+var arr = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
 var wendy = {};
+//var root=this;
 
 
-wendy.size = function(thing) {
-  console.log(thing.length);
+
+    // _.first
+wendy.first = function(arr, funct) {
+    if (arr == null) return void 0;
+    if (funct == null) return arr[0];
+    if (funct < 0) return [];
+    return Array.prototype.slice.call(arr, 0, funct);
 };
 
+    // _.size
+wendy.size = function (list) {
+  return(list.length);
+};
 
+    // _.random
+wendy.random = function(min, max) {
+    if (max == null) {
+      max = min;
+      min = 0;
+    }
+    return min+Math.floor(Math.random() * (max - min + 1));
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // _.object
-
-var ironYard = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
-var age = ["30yrs", "25yrs", "24yrs", "23yrs", "22yrs", "31yrs", "29yrs", "35yrs", "27yrs"];
-
-var root=this;
-var wendy=[];
-
-root.wendy = wendy;
+    // _.equal
+wendy.equal= function(a,b){
+if (a===b) return true;
+else{
+  return false;
+}
+};
 
 wendy.object = function( arr, function) {
     if (arr == null) return {};
@@ -56,96 +49,14 @@ wendy.object = function( arr, function) {
     return result;
   };
 
-  var w= wendy.object(arr,age);
-
-  console.log(w);
 
 
-
-    // _.first
-
-var ironYard = ["Tim","Wendy","Richard", "Chelsea", "Emory", "Victoria", "John", "Joanna","Max"];
-var wendy=[];
-var n=7
-
-wendy.first = function(ironYard, n) {
-    if (ironYard == null) return void 0;
-    if (n == null) return ironYard[0];
-    if (n < 0) return [];
-    return Array.prototype.slice.call(ironYard, 0, n);
-  };
-
-    console.log(wendy.first(ironYard, n));
-
-    // _.size
-
-var chase = {}
-
-var myArray = [1,2,3,4,5];
-
-chase.size = function (list) {
-  return(list.length);
+    // Class
+wendy.now = function(arr) {
+  return new Date().getTime();
 };
 
-chase.size(myArray)
-  var w = chase.size(myArray)
-  console.log(w);
-
-
-      // _.range
-
-var start=0;
-var stop=20;
-var step=5;
-var andrew={};
-
-andrew.range = function(start, stop, step) {
-    if (arguments.length <= 1) {
-      stop = start || 0;
-      start = 0;
-    }
-    step = step || 1;
-
-    var length = Math.max(Math.ceil((stop - start) / step), 0);
-    var range = Array(length);
-
-    for (var idx = 0; idx < length; idx++, start += step) {
-      range[idx] = start;
-    }
-
-    return range;
-  };
-
-console.log(andrew.range(start,stop, step));
-
-
-
-
-      // CLASS REVIEW
-
-
-  // setup my main function
-  var tim= {};
-
-  var arr = ['Tim', 'Phil', 'Bill'];
-
-    // Function will return a new array
-    // Take two parameters
-    // 1. an array
-    // 2. a callback, function
-  tim.map = function (arr, funct) {
-    var res = [], i;
-    for (i = 0; i < arr.length; i++){
-      res[i] = funct(arr[i]);
-    }
-
-    return res;
-  };
-
-
-
-
-  tim.map = function (arr, funct) {
+wendy.map = function (arr, funct) {
     if ( Array.isArray(arr) ) {
         if (arr.length > 0) {
           var res = [], i;

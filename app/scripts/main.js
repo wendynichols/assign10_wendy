@@ -51,7 +51,6 @@ wendy.object = function( arr, function) {
 
 
 
-    // Class
 wendy.now = function(arr) {
   return new Date().getTime();
 };

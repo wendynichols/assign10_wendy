@@ -9,3 +9,9 @@ size
 random
 equal
 map
+
+Libraries Used:
+Underscore
+
+Want to try it??
+Clone my repo 
